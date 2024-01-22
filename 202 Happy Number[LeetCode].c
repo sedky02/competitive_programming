@@ -9,7 +9,7 @@ bool isHappy(int n) {
     int longeur = (int)(log10(n)+1);
     ch = (char*)  malloc( longeur+1);
     sprintf(ch , "%d",n);
-    
+
     while(strlen(ch) != 1 ) {
         int s = 0,i;
         for(i=0; i <strlen(ch);i++){
@@ -29,6 +29,7 @@ bool isHappy(int n) {
         ch = (char*)  malloc( longeur+1);
         sprintf(ch , "%d",s);
     }
+    
     if(ch[0] == '1') return true;
     return false;
 }
